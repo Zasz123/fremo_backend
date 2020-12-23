@@ -1,0 +1,4 @@
+node_mobules
+logs
+.dockerignore
+Dockerfile

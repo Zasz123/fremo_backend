@@ -8,7 +8,3 @@ export interface IUserLogin {
   accountId: string;
   password: string;
 }
-
-export interface IUserMyInfo {
-  token: string;
-}

@@ -11,7 +11,9 @@ const Login = async (req: Request, res: Response, next: NextFunction) => {
 
     res.json({
       success: true,
-      token,
+      data: {
+        token,
+      },
     });
   } catch (error) {
     logger.error(error.message);

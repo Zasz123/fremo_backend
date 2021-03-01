@@ -6,8 +6,9 @@ import Register from "../middlewares/user/register";
 import Login from "../middlewares/user/login";
 import MyInfo from "../middlewares/user/myInfo";
 
+router.get("/info", MyInfo);
+
 router.post("/register", Register);
 router.post("/login", Login);
-router.post("/info", MyInfo);
 
 export default router;

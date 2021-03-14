@@ -1,5 +1,5 @@
 # Dockerfile
-FROM node:12
+FROM node:14
 
 # set work dir
 WORKDIR /usr/src/app
@@ -9,9 +9,12 @@ COPY package.json ./
 COPY yarn.lock ./
 
 # install package
-RUN yarn
+RUN yarn global add typescript\
+    && yarn
 
 COPY . .
 
+RUN npx tsc
+
 EXPOSE 4000
-CMD ["yarn", "start"]
+CMD ["node", "dist/app.js"]

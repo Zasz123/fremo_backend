@@ -1,4 +1,4 @@
-node_mobules
+node_modules
 logs
 .dockerignore
 Dockerfile

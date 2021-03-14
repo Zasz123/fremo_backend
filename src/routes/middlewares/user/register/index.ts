@@ -5,12 +5,13 @@ import { UserRegister } from "../../../../service/user";
 import { IUserRegister } from "../../../../interfaces/User";
 
 const Register = async (req: Request, res: Response, next: NextFunction) => {
-  const { accountId, password, name }: IUserRegister = req.body;
+  const { accountId, password, name, googleUid }: IUserRegister = req.body;
   try {
     await UserRegister({
       accountId,
       password,
       name,
+      googleUid,
     });
 
     res.json({

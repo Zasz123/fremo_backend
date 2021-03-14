@@ -1,4 +1,7 @@
+import { UserAttributes } from "../database/models/user.models";
+
 export interface IUserRegister {
+  googleUid: string;
   accountId: string;
   password: string;
   name: string;
